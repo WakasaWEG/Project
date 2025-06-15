@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Онлайн-аптека | Регистрация</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f7f7f7;
+    color: #000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #A569BD 100%);
+}
+
+.container h1 {
+    margin-bottom: 30px;
+    color: #85d7c8;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px -6px #000;
+    width: 300px;
+}
+
+.container form input {
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #85d7c8;
+    border-radius: 8px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.container form input:focus {
+    box-shadow: 0 0 10px #85d7c8;
+    border-color: #60c7b3;
+}
+
+.container form button {
+    padding: 10px 20px;
+    background: #85d7c8;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.container form button:hover {
+    background: #60c7b3;
+}
+
+.container p {
+    margin-top: 20px;
+    color: #666;
+}
+
+.container p a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container p a:hover {
+    color: #60c7b3;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация</h1>
+        <form action="php/register.php" method="POST">
+            <input type="text" name="username" placeholder="Номер телефона" required>
+            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="password" name="confirm" placeholder="Повторите пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+         <p>Есть аккаунт?<a href="Authorization.php"> Войти</a></p>
+        <p><a href="OnlinePharmacy.php">На главную</a></p>
+    </div>
+</body>
+</html>
